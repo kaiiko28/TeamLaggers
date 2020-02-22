@@ -28,6 +28,7 @@ Route::get('/trans', function(){
 Route::post('/result', 'SearchController@show')->name('dropresult');
 Route::get('/trans', 'TransportationController@index')->name('transportation.lasnding');
 Route::post('/ride/result', 'ResultController@result')->name('transportation.result');
+Route::post('/ride/book', 'ResultController@book')->name('transportation.book');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -36,4 +37,12 @@ Route::get('/TLayout', function(){
     return view('dashboard.transporter.dashboard');
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/ride/approved', 'ResultController@approved')->name('book.approved');
+Route::get('/ride/declined', 'ResultController@declined')->name('book.declined');
+Route::get('/ride/edit', 'ResultController@edit')->name('book.edit');
+Route::post('/ride/push', 'ResultController@updatedata')->name('book.update');
+
+Route::get('/cancel', function(){
+    return redirect()->back();
+})->name('back');
 

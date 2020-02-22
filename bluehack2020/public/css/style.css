@@ -20,3 +20,6 @@
 .blog .carousel-indicators .active {
 background: #707070;
 }
+.nav-link {
+    font-weight: 900;
+}

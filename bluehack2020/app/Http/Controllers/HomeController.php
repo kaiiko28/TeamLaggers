@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\BookTravel;
+use App\Transportation;
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,12 +27,13 @@ class HomeController extends Controller
     public function index()
     {
         if(auth()->user()->role == 'tourist') {
-            
-            return view('dashboard.tourist.dashboard');
+            $booking = BookTravel::where('user_id', Auth::user()->id)->get();
+            return view('dashboard.tourist.dashboard',compact('booking'));
         }
         else {
-            
-            return view('dashboard.tourist.dashboard');
+            $booking = BookTravel::where('owner_vehicle_id', Auth::user()->id)->where('status', '!=', "declined" )->orderby('status', 'desc')->get();
+            // return $booking;
+            return view('dashboard.transporter.dashboard',compact('booking'));
         }
         
     }

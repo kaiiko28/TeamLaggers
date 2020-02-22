@@ -17,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    
+    <link rel="stylesheet" href="{{ asset('/mdb/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('/mdb/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/fontawesome/css/all.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
 </head>
@@ -50,22 +55,16 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->firstname . " " . Auth::user()->lastname }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}"> {{ Auth::user()->firstname . " " . Auth::user()->lastname }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" > {{ __('Logout') }}</a>
+                                
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         @endguest
                     </ul>
@@ -73,9 +72,14 @@
             </div>
         </nav>
 
-        <main class="container-fluid">
+        <main class="container-fluid mt-5">
+            @include('inc.messeges')
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('/mdb/js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{ asset('/mdb/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('/mdb/js/mdb.min.js')}}"></script>
 </body>
 </html>

@@ -53,7 +53,6 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
         
         <div class="container">
             <div class="row">
@@ -66,13 +65,13 @@
                     <h2>Available Vehicles</h2>
                     
 
-                    <form method="POST" action="" class="text-center">
-
+                    <form method="post" action="{{ route('transportation.book') . '?from=' . $from . '&to=' . $to }}" class="text-center">
+                        @csrf
                         <div class="grid boxed text-center">
 
                             @if (count($result) > 0)
                                 @foreach ($result as $result)
-                                    <input type="radio" id="{{$result->id}}" name="role" value="{{$result->id}}">
+                                    <input type="radio" id="{{$result->id}}" name="vehicle" value="{{$result->id}}">
                                     <label for="{{$result->id}}">
                                         <img class="grid-item" src="{{ asset('/') . $result->owner_vehicle}}" alt="">
                                         <h3>₱ {{$result->vehicle_rent_price}} / hr</h3>
@@ -82,7 +81,17 @@
                         </div>
                             <div class="row justify-content-md-center my-5" >
                                 
-                                <div class="col-sm-3 sm-offset-3"><input class="form-control" type="date" name="" id=""> </div>
+                                <div class="col-sm-3 sm-offset-3">
+                                    <input 
+                                    name="date" 
+                                    id="date" 
+                                    class="form-control" 
+                                    style="width: 100%; display: inline;" 
+                                    onchange="invoicedue(event);" 
+                                    required=""
+                                    value="{{ old('date') }}" 
+                                    type="date">
+                                 </div>
                                 <div class="col-sm-3">
                                 <select class="form-control"  name="time" id="">
                                     
@@ -105,7 +114,7 @@
                                 </div>
                                 <div class="col-sm-2">
                                     
-                                <select class="form-control" name="time" id="">
+                                <select class="form-control" name="AMPM" id="">
                                     
                                     <option value="AM">AM</option>
                                     <option value="AM">PM</option>
@@ -120,7 +129,6 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection
 
 @section('script')
