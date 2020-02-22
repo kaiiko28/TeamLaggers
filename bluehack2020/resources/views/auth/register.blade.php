@@ -1,4 +1,36 @@
 @extends('layouts.app')
+@section('style')
+    <style>
+        .boxed {
+            display: inline-flex;
+            width: 100%
+        }
+        
+        .boxed label {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        border: solid 2px #ccc;
+        transition: all 0.3s;
+        background: #ddd;
+        border-radius: 5px;
+        }
+        .boxed label:hover {
+        
+            background: #fff;
+        }
+
+        .boxed input[type="radio"] {
+        display: none;
+        }
+
+        .boxed input[type="radio"]:checked + label {
+        border: solid 2px blue;
+        background: blue;
+        color: #fff;
+        }
+    </style>
+@endsection
 
 @section('content')
 <div class="container">
@@ -10,14 +42,38 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <div class="form-group row text-center">
+                            <div class="boxed">
+                                <input type="radio" id="tourist" name="role" value="tourist">
+                                <label for="tourist">Tourist</label>
 
+                                
+                                <input type="radio" id="transporter" name="role" value="transporter">
+                                <label for="transporter">Transporter</label>
+                            
+                                
+                            </div>
+                        </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('firstame') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
 
-                                @error('name')
+                                @error('firstname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+
+                                @error('lastname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -10,7 +10,7 @@
             </div>
             <div class="col-sm-6">
                 <h2>Available Vihicles</h2>
-                <img src="{{ asset('/') }}img/" alt="">
+                <img src="{{ asset('/') }}img/etrik1.jpg" alt="">
             </div>
         </div>
     </div>
