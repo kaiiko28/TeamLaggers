@@ -37,6 +37,7 @@ Route::get('/TLayout', function(){
     return view('dashboard.transporter.dashboard');
 });
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 Route::get('/ride/approved', 'ResultController@approved')->name('book.approved');
 Route::get('/ride/declined', 'ResultController@declined')->name('book.declined');
 Route::get('/ride/edit', 'ResultController@edit')->name('book.edit');
@@ -45,4 +46,10 @@ Route::post('/ride/push', 'ResultController@updatedata')->name('book.update');
 Route::get('/cancel', function(){
     return redirect()->back();
 })->name('back');
+=======
+Route::get('/TuLayout', function(){
+    return view('dashboard.tourist.dashboard');
+});
+
+>>>>>>> 7525dd11fe631827a8b048008a124c1c0ca4609d
 

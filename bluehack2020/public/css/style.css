@@ -13,8 +13,8 @@
 .blog .carousel-indicators li {
     background: #a3a3a3;
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .blog .carousel-indicators .active {
