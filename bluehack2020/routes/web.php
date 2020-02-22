@@ -23,8 +23,11 @@ Route::get('/trans', function(){
     return view('transportation.trans');
 });
 
+
+
 Route::post('/result', 'SearchController@show')->name('dropresult');
 Route::get('/trans', 'TransportationController@index')->name('transportation.lasnding');
+Route::post('/ride/result', 'ResultController@result')->name('transportation.result');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -32,3 +35,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/TLayout', function(){
     return view('dashboard.transporter.dashboard');
 });
+Route::get('/home', 'HomeController@index')->name('home');
+
