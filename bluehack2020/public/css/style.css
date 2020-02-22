@@ -2,4 +2,21 @@
     background-color: aqua;
     
 }
-.
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
