@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/dictionary', function(){
     return view('dictionary.search_nav');
 });
+Route::post('/result', 'SearchController@show')->name('dropresult');
