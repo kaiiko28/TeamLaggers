@@ -14,10 +14,13 @@
 use App\Http\Controllers\TransportationController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/dictionary', function(){
     return view('dictionary.search_nav');
+});
+Route::get('/trans', function(){
+    return view('transportation.trans');
 });
 Route::post('/result', 'SearchController@show')->name('dropresult');
 Route::get('/trans', 'TransportationController@index')->name('transportation.lasnding');
