@@ -18,8 +18,8 @@ class CreateTransportationsTable extends Migration
             $table->string('owner_id');
             $table->string('owner_firstname');
             $table->string('owner_lastname');
-            $table->string('owner_vihicle');
-            $table->string('vihicle_rent_price');
+            $table->string('owner_vehicle');
+            $table->string('vehicle_rent_price');
             $table->string('owner_location');
             $table->timestamps();
         });

@@ -19,11 +19,9 @@ Route::get('/', function () {
 Route::get('/dictionary', function(){
     return view('dictionary.search_nav');
 });
-<<<<<<< HEAD
 Route::post('/result', 'SearchController@show')->name('dropresult');
-=======
 Route::get('/trans', 'TransportationController@index')->name('transportation.lasnding');
+Route::post('/ride/result', 'ResultController@result')->name('transportation.result');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 9acc750887016b4387cc8493b0ed2f0527c8f9b1
