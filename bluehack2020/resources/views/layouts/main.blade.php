@@ -13,6 +13,6 @@
 </head>
 <body>
     @yield('content')
-    <img src="{{asset('/img/map.png')}}" alt="">
+    
 </body>
 </html>

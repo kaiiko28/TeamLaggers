@@ -23,6 +23,9 @@
     </div>
 </div>
 <div>
-
+//output
 </div>
+
+@include('dictionary.map')
+
 @endsection
