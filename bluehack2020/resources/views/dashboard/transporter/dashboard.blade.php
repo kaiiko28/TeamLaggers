@@ -14,7 +14,7 @@
     
 </head>
 <body>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    {{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="{{asset('/img/kalabaw1.jpg')}}"
@@ -73,6 +73,20 @@
             <h1>Bangka</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ab ea ipsam quis non deserunt sed ipsa! Libero, et. Quas dignissimos praesentium veniam vero voluptates temporibus iure fuga enim neque?</p>
         </div>
-    </div>
+    </div> --}}
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+            aria-selected="false">Previous Travel</a>
+        </li>
+      </ul>
 </body>
 </html>

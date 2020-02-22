@@ -36,4 +36,8 @@ Route::get('/TLayout', function(){
     return view('dashboard.transporter.dashboard');
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/TuLayout', function(){
+    return view('dashboard.tourist.dashboard');
+});
+
 

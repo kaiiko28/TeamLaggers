@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
 </head>
 <body>
+    @extends('layouts.app')
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -43,15 +44,15 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id veritatis praesentium laboriosam rerum, perferendis itaque totam explicabo exercitationem nam delectus mollitia labore saepe cumque deleniti libero ducimus architecto amet? Vel! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi totam corporis est error eos odit itaque, consequuntur quibusdam repellendus nulla id facere quis dolorum quos consectetur veritatis. Corporis, dolor suscipit.</p>
           </div>
           <div>
-              <h1>Language</h1>
+              <h3>Language</h3>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laborum voluptatibus dolorem voluptatem alias quo possimus impedit ut! Eaque tempore nulla, dolores corporis esse voluptatem optio commodi iste aspernatur dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus eius, nam dolorum amet impedit possimus, explicabo quod provident quam ratione harum velit dolores dolorem ipsa quibusdam voluptatibus animi aperiam!</p>
-              <button onclick="window.location.href='/dictionary'">Dictionary</button>
+              <button class="btn btn-success" onclick="window.location.href='/dictionary'">Dictionary</button>
           </div>
           <div>
-              <h1>Transportation</h1>
+              <h3>Transportation</h3>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim libero, facilis voluptas alias molestiae quasi totam voluptate illo eius perferendis maxime ut nostrum amet similique soluta. Officia maiores mollitia quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt facere quisquam impedit quis minus accusamus repellat! Accusantium unde delectus, soluta culpa nobis odio quas, ullam qui, quisquam assumenda molestias?</p>
           </div>
-          <button onclick="window.location.href='/trans'">Transportation</button>
+          <button class="btn btn-success" onclick="window.location.href='/trans'">Transportation</button>
       </div>
       <div class="container">
         <div class="row blog">

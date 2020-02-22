@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>map</title>
+    
 </head>
 <body>
     <img src="{{asset('/img/map.png')}}" alt="map" usemap="#philippines">
