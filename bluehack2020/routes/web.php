@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/dictionary', function(){
     return view('dictionary.search_nav');
 });
+Route::get('/trans', function(){
+    return view('transportation.trans');
+});
