@@ -11,12 +11,15 @@
 |
 */
 
+use App\Http\Controllers\TransportationController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/dictionary', function(){
     return view('dictionary.search_nav');
 });
-Route::get('/trans', function(){
-    return view('transportation.trans');
-});
+Route::get('/trans', 'TransportationController@index')->name('transportation.lasnding');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
