@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div style="background:url('{{ asset('/img/bg/ph.jpg') }}');background-size:cover;background-attachment:fixed"><br><br><br>
 
+{{-- <form action="{{ route('dropresult') }}"> --}}
    
     <div class="row">
         <div class="col-sm-6">
@@ -31,16 +31,37 @@
                         <div class="col-sm-6"></div>
                 
                         
-                        <a href="{{ route('dictionaryresult') }}"><button class="btn btn-success" type="submit">Submit</button></a>
+                            <a href="{{ route('dictionaryresult') }}"><button class="btn btn-success" type="submit">Submit</button></a>
                     </div>
                 </div>
                 
             </div>
+
+                <div class="border border-dark" style="padding:20px;background-color:#e9ecefa3">
+                    <div class="row">
+                        <div style="margin:10px">
+                            <h1>Tulog</h1>
+                        </div>
+                        <br>
+                        <div style="margin:10px">
+                            <h3 style="color:gray;">ipsum</h3>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <ul>
+                        <li><b> Lorem </b> ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><b> Lorem </b> Quia distinctio, debitis incidunt omnis delectus, cumque facilis voluptatem similique praesentium, qui nemo modi.</li>
+                        <li><b>Lorem </b> Cumque eveniet, dolores reiciendis mollitia sunt aperiam nisi, doloremque voluptatibus tempore, temporibus molestias corrupti expedita facere dolore sint nesciunt quibusdam deleniti illo.</li>
+                        <li> <b>Lorem </b>dolores perferendis quidem, sed eum, voluptatibus nihil.</li>
+                        <li><b>Lorem</b>  porro quas vitae consequatur eligendi! Odit.</li>
+                    </ul>
+                </div>
             
         </div>
-        <div class="col-sm-6">
-            @include('dictionary.map')</div>
+        <div class="col-sm-6">@include('dictionary.map')</div>
     </div>
+{{-- </form> --}}
 </div>
 <br>
 

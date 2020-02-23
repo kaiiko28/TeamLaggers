@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <img src="{{asset('/img/map.png')}}" alt="map" usemap="#philippines">
+    <img src="{{asset('/img/bg/bansa.png')}}" alt="map" usemap="#philippines">
 
 <map id="philippines">
     <area data-toggle="tooltip" title="bikolano" shape="rect" coords="307,309,358,390" href="/" alt="bikolano">

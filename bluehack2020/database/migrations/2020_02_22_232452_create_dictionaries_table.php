@@ -15,6 +15,8 @@ class CreateDictionariesTable extends Migration
     {
         Schema::create('dictionaries', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->longText('dialect');
+            $table->longText('word');
             $table->timestamps();
         });
     }
